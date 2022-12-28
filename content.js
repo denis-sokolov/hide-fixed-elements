@@ -4,6 +4,8 @@
         css_injected = false,
         elements_hidden = false,
         uuid = "9ee3ff5e_b744_4f08_ab24_355873ebfda5",
+        // Must begin with a letter
+        className = 'C' + uuid,
         cooldown = 0,
         timeout = 0;
 
@@ -17,7 +19,7 @@
         if (!css_injected) {
             var style = document.createElement("style");
             style.appendChild(document.createTextNode(
-                "." + uuid + " { opacity: 0 !important; visibility: hidden !important; transition: opacity 100ms, visibility 0s linear 100ms !important; }"
+                "." + className + " { opacity: 0 !important; visibility: hidden !important; transition: opacity 100ms, visibility 0s linear 100ms !important; }"
             ));
             document.head.appendChild(style);
             css_injected = true;
@@ -38,11 +40,11 @@
         var elems = document.getElementsByTagName("*");
         for (var i = 0; i < elems.length; i++) {
             var e = elems[i];
-            if (e.classList.contains(uuid))
+            if (e.classList.contains(className))
                 continue;
             var style = window.getComputedStyle(e);
             if (style.position == "fixed" || style.position == "sticky") {
-                e.classList.add(uuid);
+                e.classList.add(className);
                 elements_hidden = true;
             }
         }
@@ -54,9 +56,9 @@
     }
 
     function unhideFixedElements() {
-        var elems = document.getElementsByClassName(uuid);
+        var elems = document.getElementsByClassName(className);
         for (var i = elems.length - 1; i >= 0; i--)
-            elems[i].classList.remove(uuid);
+            elems[i].classList.remove(className);
         elements_hidden = false;
     }
 
