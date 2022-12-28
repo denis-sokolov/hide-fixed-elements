@@ -1,4 +1,4 @@
-var uuid = "FCFB2A52_C7DC_4B44_B242_0DC15B13CA12";
+var uuid = "9ee3ff5e_b744_4f08_ab24_355873ebfda5";
 
 chrome.browserAction.onClicked.addListener(function (tab) {
     if (!tab.url.match(/^(http|https|ftp|file)/)) {

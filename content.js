@@ -3,7 +3,7 @@
         firstRun = false,
         css_injected = false,
         elements_hidden = false,
-        uuid = "FCFB2A52_C7DC_4B44_B242_0DC15B13CA12",
+        uuid = "9ee3ff5e_b744_4f08_ab24_355873ebfda5",
         cooldown = 0,
         timeout = 0;
 
