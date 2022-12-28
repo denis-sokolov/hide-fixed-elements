@@ -3,7 +3,7 @@
 
     "name": "Hide Fixed Elements packed by Denis",
     "description": "Hide fixed elements on a page to open up more viewing space",
-    "version": "1.2",
+    "version": "1.2.1",
 
     "applications": {
         "gecko": {
